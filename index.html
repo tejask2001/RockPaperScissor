@@ -1,72 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="homepage.css">
-</head>
-<body>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
     <div id="header">
-        <div id="heading">
-            <div class="txt">ROCK</div>
-            <div class="txt">PAPER</div>
-            <div class="txt">SCISSORS</div>
-        </div>
-        <div id="computerScoreBlock">
-            <div id="computerText">
-                COMPUTER<br>SCORE
-            </div>
-            <div id="computerScore">
-                0
-            </div>
-        </div>
-        <div id="yourScoreBlock">
-            <div id="yourText">
-                YOUR<br>SCORE
-            </div>
-            <div id="yourScore">
-                0
-            </div>
-        </div>
+      <div id="heading">
+        <div class="txt">ROCK</div>
+        <div class="txt">PAPER</div>
+        <div class="txt">SCISSORS</div>
+      </div>
+      <div id="computerScoreBlock">
+        <div id="computerText">COMPUTER<br />SCORE</div>
+        <div id="computerScore">0</div>
+      </div>
+      <div id="yourScoreBlock">
+        <div id="yourText">YOUR<br />SCORE</div>
+        <div id="yourScore">0</div>
+      </div>
     </div>
     <div id="buttons">
-        <img src="templates/triangle.png" id="triangle">
-        <div id="fist" class="game-btn">
-            <img src="templates/fist.png" class="you-select-img" id="fist-img">
+      <img src="templates/triangle.png" id="triangle" />
+      <div id="fist" class="game-btn" value="1">
+        <img src="templates/fist.png" class="you-select-img" id="fist-img" />
+      </div>
+      <div id="scissor" class="game-btn" value="2">
+        <img
+          src="templates/scissor.png"
+          class="you-select-img"
+          id="scissor-img"
+        />
+      </div>
+      <div id="hand" class="game-btn" value="0">
+        <img src="templates/hand.png" class="you-select-img" id="hand-img" />
+      </div>
+      <div class="pc-option">
+        <div id="hand-pc" class="pc-hand">
+          <img src="templates/hand.png" class="pc-select-img" />
         </div>
-        <div id="scissor" class="game-btn">
-            <img src="templates/scissor.png" class="you-select-img" id="scissor-img">
+        <div id="fist-pc" class="pc-hand">
+          <img src="templates/fist.png" class="pc-select-img" />
         </div>
-        <div id="hand" class="game-btn">
-            <img src="templates/hand.png" class="you-select-img" id="hand-img" onclick="">
+        <div id="scissor-pc" class="pc-hand">
+          <img src="templates/scissor.png" class="pc-select-img" />
         </div>
+      </div>
+      <div id="youpick-txt" class="pick-msg">YOU PICKED</div>
+      <div id="pcpick-txt" class="pick-msg">PC PICKED</div>
     </div>
-
-    <button id="rules-btn"  onclick="hideRules()">RULES</button>
+    <button id="next-btn" onclick="location.href='hurray.html'" class="nxt-btn">
+      NEXT
+    </button>
+    <button id="rules-btn" onclick="hideRules()">RULES</button>
     <div id="rules-container">
-        <div id="rules">
-            <div id="rules-heading">Game Rules</div>
-            <div id="rules-list">
-                <ul>
-                    <li><p>Rock beats scissors, scissors beat paper, and paper beats rock.</p></li>
-                    <li><p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p></li>
-                    <li><p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p></li>
-                    <li><p>If both players lay down the same hand, each player lays down another hand</p></li>
-                </ul>
-            </div>
+      <div id="rules">
+        <div id="rules-heading">Game Rules</div>
+        <div id="rules-list">
+          <ul>
+            <li>
+              <p>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+              </p>
+            </li>
+            <li>
+              <p>
+                Agree ahead of time whether you’ll count off “rock, paper,
+                scissors, shoot” or just “rock, paper, scissors.”
+              </p>
+            </li>
+            <li>
+              <p>
+                Use rock, paper, scissors to settle minor decisions or simply
+                play to pass the time
+              </p>
+            </li>
+            <li>
+              <p>
+                If both players lay down the same hand, each player lays down
+                another hand
+              </p>
+            </li>
+          </ul>
         </div>
-        <button id="close" onclick="hideRules()">
-            X
-        </button>
+      </div>
+      <button id="close" onclick="hideRules()">X</button>
     </div>
-    <div id="result-container">
-            <div class="msg">
-                <div id="win-text">YOU WIN</div>
-                <div id="other-text">AGAINST PC</div>
-            </div>
-            <button id="play-button">PLAY AGAIN</button>
-        </div>
+    <div id="result-win" class="result-container">
+      <div class="msg">
+        <div id="win-text">YOU WIN</div>
+        <div id="other-text">AGAINST PC</div>
+      </div>
+      <button id="playAgain" class="play-button">PLAY AGAIN</button>
+    </div>
+    <div id="result-lose" class="result-container">
+      <div class="msg">
+        <div id="win-text">YOU LOST</div>
+        <div id="other-text">AGAINST PC</div>
+      </div>
+      <button id="playAgai" class="play-button">PLAY AGAIN</button>
+    </div>
+    <div id="result-draw" class="result-container">
+      <div class="msg">
+        <div id="win-text">TIE UP</div>
+      </div>
+      <button id="replay" class="play-button">REPLAY</button>
+    </div>
     <script src="game.js"></script>
-</body>
+  </body>
 </html>
