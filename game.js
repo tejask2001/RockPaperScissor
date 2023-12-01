@@ -36,6 +36,8 @@ youSelect.forEach((element) => {
     triangle.style.display = "none";
     element.style.display = "block";
     element.classList.add("yourChoice");
+    element.style.height = "130px";
+    element.style.width = "130px";
     youPickMsg.style.display = "flex";
     var selectedDiv = pcHands[x];
     setTimeout(() => {
