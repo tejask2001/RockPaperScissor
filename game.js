@@ -23,6 +23,7 @@ let pcScore = document.getElementById("computerScore");
 
 let userScore = parseInt(localStorage.getItem("userScore")) || 0;
 let computerScore = parseInt(localStorage.getItem("computerScore")) || 0;
+let winEffect=document.getElementById('win-effect')
 
 yourScore.innerText = userScore;
 pcScore.innerText = computerScore;
@@ -55,6 +56,7 @@ youSelect.forEach((element) => {
         userScore++;
         nextButton.style.display = "block";
         ruleButton.style.right = "150px";
+        winEffect.style.display='flex'
       } else if (urChoice == x) {
         console.log("draw");
         drawResult.style.display = "flex";
@@ -62,6 +64,8 @@ youSelect.forEach((element) => {
         console.log("You lose");
         loseResult.style.display = "flex";
         computerScore++;
+        winEffect.style.display='flex'
+        winEffect.style.left='60.5%'
       }
       updateScores();
     }, 1000);

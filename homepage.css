@@ -325,3 +325,33 @@ li p {
   position: absolute;
   right: 7%;
 }
+.win-eff{
+    position: absolute;
+    height: 90%;
+    width: 50%;
+    right: 60.5%;
+    background-color: #66b248;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.circle{
+    position: absolute;
+    height: 85%;
+    width: 85%;
+    background-color: #32a62f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerCircle{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-color: #289a27;
+    border-radius: 50%;
+}
