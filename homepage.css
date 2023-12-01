@@ -279,6 +279,8 @@ li p {
 .yourChoice {
   left: 0%;
   top: 20%;
+  height:"130px";
+  width : "130px";
 }
 .pc-hand {
   height: 128px;
